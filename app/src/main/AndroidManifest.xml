@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.androimage.booksagar">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.androimage.booksagar.app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.androimage.booksagar.activity.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity android:name="com.androimage.booksagar.activity.AddBookActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androimage.booksagar.activity.MainActivity" />
+        </activity>
+        <activity android:name="com.androimage.booksagar.activity.UpdateBookActivity"
+            android:screenOrientation="portrait">
+
+        <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androimage.booksagar.activity.MyBooksActivity" />
+        </activity>
+        <activity android:name="com.androimage.booksagar.activity.MyBooksActivity"
+            android:screenOrientation="portrait">
+
+        <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androimage.booksagar.activity.MainActivity" />
+        </activity>
+        <activity android:name="com.androimage.booksagar.activity.ProfileActivity"
+            android:screenOrientation="portrait">
+
+        <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androimage.booksagar.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.androimage.booksagar.activity.LoginActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar"
+            android:screenOrientation="portrait">
+
+
+        <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name="com.androimage.booksagar.activity.SignupActivity"
+            android:screenOrientation="portrait">
+
+        <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androimage.booksagar.activity.LoginActivity" />
+        </activity>
+
+        <!-- SMS Receiver -->
+        <receiver android:name="com.androimage.booksagar.receiver.SmsReceiver">
+            <intent-filter android:priority="99999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Intent service -->
+        <service
+            android:name="com.androimage.booksagar.service.HttpService"
+            android:exported="false" />
+
+        <activity
+            android:name="com.androimage.booksagar.activity.SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait">
+
+        <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.androimage.booksagar.activity.DetailBookActivity"
+            android:screenOrientation="portrait">
+
+        <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androimage.booksagar.activity.MyBooksActivity" />
+        </activity>
+        <activity android:name="com.androimage.booksagar.activity.DetailBookSellerActivity"
+            android:screenOrientation="portrait">
+
+        <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androimage.booksagar.activity.MyBooksActivity" />
+        </activity>
+
+        <activity
+            android:name="com.androimage.booksagar.activity.ForgetPasswordActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar"
+            android:screenOrientation="portrait">
+
+        <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androimage.booksagar.activity.LoginActivity" />
+        </activity>
+        <activity android:name="com.androimage.booksagar.activity.ChatActivity"
+            android:screenOrientation="portrait">
+
+        <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androimage.booksagar.activity.MainActivity" />
+            </activity>
+        <activity android:name="com.androimage.booksagar.activity.InterestedPeopleActivity"
+            android:screenOrientation="portrait">
+
+        <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androimage.booksagar.activity.MyBooksActivity" />
+        </activity>
+
+        <service android:name="com.androimage.booksagar.service.BookSagarMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.androimage.booksagar.service.BookSagarInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.androimage.booksagar.activity.UpdateProfileActivity"
+            android:screenOrientation="portrait">
+
+        <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androimage.booksagar.activity.ProfileActivity" />
+        </activity>
+        <activity android:name="com.androimage.booksagar.activity.DeveloperActivity"
+            android:screenOrientation="portrait">
+
+        <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androimage.booksagar.activity.MainActivity" />
+            </activity>
+        <activity android:name="com.androimage.booksagar.activity.AboutUsActivity"
+            android:screenOrientation="portrait">
+
+        <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androimage.booksagar.activity.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BookSagar</string>
+    <string name="backdrop_title">LOVE BOOKS</string>
+    <string name="backdrop_subtitle">So many books so little time . . .</string>
+    <string name="facebook_app_id">539164316269271</string>
+    <string name="drawer_open">Drawer Opened</string>
+    <string name="drawer_close">Drawer Closed</string>
+    <string name="msg_sit_back">Sit back &amp; Relax! while we verify your mobile number</string>
+    <string name="msg_manual_otp">(Enter the OTP below in case if we fail to detect the SMS automatically)</string>
+    <string name="lbl_enter_otp">Enter OTP</string>
+    <string name="lbl_submit">SUBMIT</string>
+
+    <string name="rs">\u20B9</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

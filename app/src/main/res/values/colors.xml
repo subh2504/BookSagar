@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<resources>-->
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#303F9F</color>-->
+    <!--<color name="viewBg">#f1f5f8</color>-->
+    <!--<color name="album_title">#4c4c4c</color>-->
+
+<!--</resources>-->
+
+<resources>
+<color name="colorPrimary">#E52F38</color>
+<color name="colorPrimaryDark">#BF292E</color>
+<color name="colorAccent">#BF292E</color>
+<color name="viewBg">#f1f5f8</color>
+<color name="album_title">#4c4c4c</color>
+    <color name="black">#000000</color>
+
+</resources>

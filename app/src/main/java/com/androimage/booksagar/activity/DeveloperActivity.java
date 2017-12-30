@@ -1,0 +1,21 @@
+package com.androimage.booksagar.activity;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.webkit.WebView;
+
+import com.androimage.booksagar.R;
+
+public class DeveloperActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_developer);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        WebView webView = (WebView) findViewById(R.id.browser);
+        webView.loadUrl("file:///android_asset/AboutDeveloper.htm");
+
+    }
+}

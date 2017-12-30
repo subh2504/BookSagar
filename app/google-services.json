@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "216033689520",
+    "firebase_url": "https://booksagar-78202.firebaseio.com",
+    "project_id": "booksagar-78202",
+    "storage_bucket": "booksagar-78202.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216033689520:android:772e626000028359",
+        "android_client_info": {
+          "package_name": "com.androimage.booksagar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216033689520-422jljett01nh77llqp95fli0s1hi20n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDszaeOGPt7hPWaNLuljALL7Zkt0tPN_JI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
